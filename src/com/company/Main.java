@@ -10,9 +10,8 @@ public class Main {
         st.add("one");
         st.add("two");
         st.add("three");
-        System.out.println(st.get("one").testVariable);
-        System.out.println(st.get("two").testVariable);
-        System.out.println(st.get("three").testVariable);
-        System.out.println(st.get("four").testVariable);
+        System.out.println(st.get("one"));
+        System.out.println(st.get("two"));
+        System.out.println(st.get("three"));
     }
 }

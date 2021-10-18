@@ -5,13 +5,8 @@ public class Node {
     private Node rightNode;
     public final String id;
 
-    private static int testVariableCounter = 0;
-    public final int testVariable;
-
     Node(String id) {
         this.id = id;
-        Node.testVariableCounter++;
-        this.testVariable = Node.testVariableCounter;
     }
 
     public Node getLeftNode() {
