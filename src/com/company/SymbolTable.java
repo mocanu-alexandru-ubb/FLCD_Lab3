@@ -1,5 +1,8 @@
 package com.company;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class SymbolTable {
     private Node root;
 
@@ -24,6 +27,20 @@ public class SymbolTable {
         else {
             return root;
         }
+    }
+
+    public void writeToFile(FileWriter writer) {
+        try {
+            writeNodeToFile(writer, root);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void writeNodeToFile(FileWriter writer, Node node) throws IOException {
+        writer.write("(" + node.id + ", " + node.referenceNumber + ")\n");
+        if (node.getLeftNode() != null) writeNodeToFile(writer, node.getLeftNode());
+        if (node.getRightNode() != null) writeNodeToFile(writer, node.getRightNode());
     }
 
 }

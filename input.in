@@ -1,10 +1,10 @@
 let int a
 let int b
 let int c
-console >>> a
+console >>> 1a
 console >>> b
 console >>> c
 
 const int delta = - * b b * * 4 a c
-console >>> "x1 equals " >>> / + -b sqrt (delta) * a 2
-console >>> "x2 equals " >>> / - -b sqrt (delta) * a 2
+console >>> "x1 equals " >>> / + -b sqrt ( delta ) * a 2
+console >>> "x2 equals " >>> / - -b sqrt ( delta ) * a 2

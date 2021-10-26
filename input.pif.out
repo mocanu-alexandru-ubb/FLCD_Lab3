@@ -1,0 +1,12 @@
+(let, 0)
+(int, 0)
+(a, 1)
+(let, 0)
+(int, 0)
+(b, 2)
+(let, 0)
+(int, 0)
+(c, 3)
+(console, 0)
+(>>>, 0)
+Lexical Error
