@@ -52,7 +52,6 @@ public class LexicalScanner {
                 else theFoundString.append(" ").append(token);
             }
         }
-
         return result;
     }
 

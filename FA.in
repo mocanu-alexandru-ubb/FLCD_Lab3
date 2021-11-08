@@ -1,0 +1,11 @@
+Q=S,A,B,K
+E=a,b,c
+q0=S
+F=K
+S=
+S,a,A
+S,b,B
+A,a,A
+A,c,K
+B,c,A
+B,c,K

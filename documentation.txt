@@ -1,0 +1,14 @@
+https://github.com/mocanu-alexandru-ubb/FLCD_Lab3
+The scanner reads each line from the input file. It splits the line on whitespaces, keeping string constants intact.
+The PIF is kept simply in a file, each line representing an entry in the PIF.
+
+
+EBNF for Finite Automata input:
+
+input = assignments '\n' "S=" '\n' transitions
+assignments = identifier '=' value
+identifier = 'F' | 'Q' | "Q0" | 'E'
+value = constant { ',' value }
+constant = litteraly orice
+transitions = transition { '\n' transitions }
+transition = constant ',' constant ',' constant
