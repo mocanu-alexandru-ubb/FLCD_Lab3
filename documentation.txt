@@ -2,6 +2,13 @@ https://github.com/mocanu-alexandru-ubb/FLCD_Lab3
 The scanner reads each line from the input file. It splits the line on whitespaces, keeping string constants intact.
 The PIF is kept simply in a file, each line representing an entry in the PIF.
 
+To test if a sequence is accepted by the Finite Automata, we follow the following process:
+0. Start from the initial state.
+1. Check if we have generated the whole initial sequence. If so, we found our answer.
+2. Check if we generated a sequence longer than the initial sequence. If so, we can't continue from this state.
+3. Go trough all the possible transitions from the current state.
+4. If a transition adds the expected letter to our generated sequence start the process from step 1 with the new state.
+
 
 EBNF for Finite Automata input:
 
