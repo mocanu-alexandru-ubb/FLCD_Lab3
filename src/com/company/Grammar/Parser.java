@@ -52,6 +52,7 @@ public class Parser {
         else {
             NonTerminal resultingNonTerminal = (NonTerminal) production.result.get(index);
             if (FIRST.get(resultingNonTerminal.ARRAY_IDX).contains(Terminal.epsilon)) {
+                //TODO first add all terminals != epsilon
                 firstChanged = conjunctionOfOne(nextF, production, index + 1);
             }
             else {
