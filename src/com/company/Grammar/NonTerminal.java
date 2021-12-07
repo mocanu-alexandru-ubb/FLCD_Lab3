@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NonTerminal extends Node{
+
     public final List<Production> productions = new ArrayList<>();
 
     public NonTerminal(String identifier) {

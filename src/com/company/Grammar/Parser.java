@@ -1,8 +1,6 @@
 package com.company.Grammar;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Parser {
@@ -110,6 +108,20 @@ public class Parser {
         }
     }
 
+    private final Map<Pair<Node, Terminal>, ParsingTableCell> parsingTable = new HashMap<>();
+    private void createParsingTable() {
+        for (NonTerminal A : nonTerminals) {
+            for (Terminal a : FIRST.get(A.ARRAY_IDX)) {
+                if (a != Terminal.epsilon)
+                    A.productions.stream()
+                            .filter(p -> computeFirstForProduction(p).contains(a))
+                            .findFirst()
+                            .ifPresent(p -> parsingTable.put(new Pair<>(A, a), new ParsingTableCell(p.result, p.INDEX)));
+                else {
 
+                }
+            }
+        }
+    }
 
 }
